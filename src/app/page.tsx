@@ -16,6 +16,8 @@ type Post = {
   userId: string;
 };
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Latest Feed",
   description: "Social media but not",
