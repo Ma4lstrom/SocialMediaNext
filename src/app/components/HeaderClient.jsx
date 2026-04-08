@@ -13,15 +13,16 @@ import {
     SignedOut,
     UserButton,
 } from '@clerk/nextjs'
-
+import { useUser } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link';
 
 
-function HeaderClient({ user }) {
+function HeaderClient() {
     const [isOpen, setIsOpen] = useState(false);
     const [searchActive, setSearchActive] = useState(false);
     const router = useRouter()
+    const { user } = useUser()
 
 
     const searchOpen = () => setSearchActive(!searchActive);
